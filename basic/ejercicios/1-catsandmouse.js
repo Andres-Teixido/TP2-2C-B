@@ -26,3 +26,35 @@ Desarrollar una funcion catAndMouse que devuelve una respuesta de la siguente fo
 > 
 > Output Mouse C
 */
+
+let catA = 1;
+let catB = 2;
+let mouse = 3;
+
+let difA = 0;
+let difB = 0;
+let result = '';
+
+const getDif = (cat,mouse) => {
+    let dif = 0;
+    if(mouse>cat){
+        dif = cat - mouse;
+    }else{
+        dif = mouse - cat;
+    }
+    return dif;
+};
+
+difA = getDif( catA, mouse);
+difB = getDif( catB, mouse);
+
+if(difA == difB){
+    result = 'Mouse C';
+}
+if(difA > difB){
+    result = 'Cat A';
+}
+if(difA < difB){
+    result = 'Cat B';
+}
+console.log(result);
