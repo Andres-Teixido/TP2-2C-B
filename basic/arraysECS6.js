@@ -81,9 +81,10 @@ print(inventors.sort((a,b) =>{
 }));
 
 
+console.log(inventors[4]);
 
+inventors[4].first = 'pp';
 
-
-
+console.log(inventors[4]);
 
 
