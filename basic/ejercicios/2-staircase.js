@@ -11,7 +11,7 @@ Formar una escalera con el caracter # por ejemplo la escalera de tamaño 6 va se
 >  ######
 */
 let level = n = 10;
-let direccion = 'i';    //  direccion    i = izquierda   
+let direccion = 'd';    //  direccion    i = izquierda   
                         //  direccion OTRO = derecha
 
 let cadenaPiso = [];
