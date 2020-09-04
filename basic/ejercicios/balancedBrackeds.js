@@ -57,7 +57,7 @@ function isBalanced(s) {
         result = 'NO';
     }
     //console.log(s);
-    console.log(result);
+    //console.log(result);
     return result;
 }
 
