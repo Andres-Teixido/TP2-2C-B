@@ -3,9 +3,59 @@ const IMPOSSIBLE = 'Impossible';
 
 // Complete the organizingContainers function below.
 function organizingContainers(container) {
+    let cont=0;
+    let tipos=0;
+    let c = t = 0;
+    let totalXcontainer = [];
+    let totalXtipo = [];
+    let result = 'Possible';
     
-    //return resp;
+    container.forEach(element => {
+        //console.log(element);
+        cont = cont + 1;
+    });
+    tipos = cont;
+
+    for(let c=0; c<cont; c++){  // TOTALIZO x CONTAINER
+        totalXcontainer[c] = 0;
+        for(let t=0; t<tipos; t++){
+            totalXcontainer[c] += container[c][t];
+        }
+    }
+
+    for(let t=0; t<tipos; t++){  //  TOTALIZO  x  TIPO
+        for(let c=0; c<cont; c++){
+            if(c != t){
+                container[t][t] += container[c][t];
+                container[c][t] = 0;
+            }
+        }
+        totalXtipo[t] = container[t][t];
+    }
+
+    container.sort();
+    //console.log("Container " + container);
+    totalXtipo.sort();
+    //console.log("TotXtipo " + totalXtipo);
+    totalXcontainer.sort();
+    //console.log("TotXcontainer " + totalXcontainer);
+
+    let posC = 0;
+    totalXcontainer.forEach(tot => {
+        //console.log("totalXcontainer["+posC+"] = "+tot+" = ? = "+"totalXtipo["+posC+"] = " + totalXtipo[posC]);
+        if(tot != totalXtipo[posC]){
+            result = 'Impossible';
+        }
+        posC++;
+    });
+    return result;
 }
+
+console.log(organizingContainers(
+    [[0, 2, 1],
+     [1, 1, 1],
+     [2, 0, 0]]
+)== POSSIBLE);
 
 console.log(organizingContainers(
     [[1,3,1],
@@ -25,10 +75,10 @@ console.log(organizingContainers(
 ) == POSSIBLE);
 
 console.log(organizingContainers(
-    [997612619, 934920795, 998879231, 999926463],
+    [[997612619, 934920795, 998879231, 999926463],
     [960369681, 997828120, 999792735, 979622676],
     [999013654, 998634077, 997988323, 958769423],
-    [997409523, 999301350, 940952923, 993020546]
+    [997409523, 999301350, 940952923, 993020546]]
 )== POSSIBLE);
 
 console.log(organizingContainers(
