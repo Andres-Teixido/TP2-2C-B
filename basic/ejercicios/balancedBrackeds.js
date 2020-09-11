@@ -1,5 +1,6 @@
 // Complete the isBalanced function below.
 function isBalanced(s) {
+<<<<<<< HEAD
     let cadena = s;
     let pila = [];
     let result = 'YES';
@@ -59,10 +60,31 @@ function isBalanced(s) {
     //console.log(s);
     //console.log(result);
     return result;
+=======
+    // 
+    let aux = -1;
+
+    while (s.length != 0) {
+        aux = s.length;
+
+        s = s.replace("()","");
+        s = s.replace("[]","");
+        s = s.replace("{}","");
+
+        if(aux == s.length) return "NO";
+    }
+
+    return "YES";
+>>>>>>> 54f58182e2a2f1ab79e946bd563ff7d2ec53ffb5
 }
 
 // TESTS
+console.log('hola mundo');
+console.log(isBalanced('{[') == 'NO');
 console.log(isBalanced('{[()]}') == 'YES');
 console.log(isBalanced('{[(])}') == 'NO');
 console.log(isBalanced('{{[[(())]]}}') == 'YES');
 console.log(isBalanced('{{[[(())]]}}{}()') == 'YES');
+
+// TIPS: Pilas
+// TIPS: remplazo de cadenas
