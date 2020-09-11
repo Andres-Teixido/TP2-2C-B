@@ -4,12 +4,23 @@ const IMPOSSIBLE = 'Impossible';
 // Complete the organizingContainers function below.
 function organizingContainers(container) {
     let cont=container.length;
+
+    let sumArray = new Array(cont).fill(0);   ////   Excelente !!!  dimensiona array !!!
+
     let tipos=0;
     let c = t = 0;
     let totalXcontainer = [];
     let totalXtipo = [];
     let result = 'Possible';
-    
+
+
+for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+        sumaFilas[i] = container[j][i];
+        sumaColumnas[i] = container[i][j];
+    }
+}
+
     // container.forEach(element => {
     //     //console.log(element);
     //     cont = cont + 1;
