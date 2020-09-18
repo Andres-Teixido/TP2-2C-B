@@ -1,14 +1,9 @@
 {
-<<<<<<< HEAD
   "name": "TP2-2C-B",
-=======
-  "name": "betp2b",
->>>>>>> 54f58182e2a2f1ab79e946bd563ff7d2ec53ffb5
   "version": "1.0.0",
   "description": "Repo, taller de programación 2",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,24 +16,8 @@
   "bugs": {
     "url": "https://github.com/Andres-Teixido/TP2-2C-B/issues"
   },
-  "homepage": "https://github.com/Andres-Teixido/TP2-2C-B#readme"
-=======
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ORT-PabloFernandez/TP2-2C-B.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ORT-PabloFernandez/TP2-2C-B/issues"
-  },
-  "homepage": "https://github.com/ORT-PabloFernandez/TP2-2C-B#readme",
+  "homepage": "https://github.com/Andres-Teixido/TP2-2C-B#readme",
   "dependencies": {
-    "chalk": "^4.1.0",
-    "validator": "^13.1.1"
+    "express": "^4.17.1"
   }
->>>>>>> 54f58182e2a2f1ab79e946bd563ff7d2ec53ffb5
 }
